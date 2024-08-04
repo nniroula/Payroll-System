@@ -48,8 +48,7 @@ public class EpsServletController extends HttpServlet {
 		//db
 		String jdbcUrl = "jdbc:mysql://localhost:3306/eps_db";
 		String username = "root"; // Replace root with your mysql username
-//		String password = "root"; // Replace root with your mySQl password
-		String password = "Mysql#23";
+		// String password = "root"; // Replace root with your mySQl password
     	
     	employeeIdInput = request.getParameter("EmpID");
 		request.setAttribute("idFromIndexJspFile", employeeIdInput);
