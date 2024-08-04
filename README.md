@@ -60,3 +60,13 @@ An Employee Payroll System App that calculates the gross pay of an employee
 - ``JSTL`` - Java Standard Template Library for converting java code into html like code<br>
 - ``JDBC`` ``RDBMS`` ``MySQL``- <br>
 - ``DAO Layer`` - separate database operations from controller into DAO class <br>
+
+<hr>
+
+#### How to run this project(JSP, JSTL, Servlet, JDBC, and MySQL Project)? 
+
+- In ``Eclipse IDE`` and ``Terminal or MySQL Workbench``:-
+- In ``Terminal`` or by using MySQL workbench, create a database named eps_db and then create table named employee with columns employee_id, name, status, payRate, hours, and salary.
+- Right click on ``index.jsp file`` - Run As - run on server <br>
+- Enter the required input <br>
+- In ``Terminal`` - run the command ``mysql`` and hit enter. Then show databases; use database_name; select * from employee<br>
