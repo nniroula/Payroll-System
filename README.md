@@ -70,3 +70,14 @@ An Employee Payroll System App that calculates the gross pay of an employee
 - Right click on ``index.jsp file`` - Run As - run on server <br>
 - Enter the required input <br>
 - In ``Terminal`` - run the command ``mysql`` and hit enter. Then show databases; use database_name; select * from employee<br>
+- ``epsV6 and onward``, update your ``mysql`` credentials in ``JdbcCredential.java file``.
+
+<hr>
+
+#### Version-6 (epsV6) 
+
+- Implements ``DAO (Data Access Object) layer``- to separated ``JDBC`` ``CRUD`` operations from the controller
+- Uses ``final class`` concept - to hold mySQL login credentials.<br>
+- ``DAO Layer`` - handles database related operations <br>
+
+<hr>
