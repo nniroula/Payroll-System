@@ -15,16 +15,11 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 
-/**
- * Servlet implementation class EpsServletController
- */
+/*
 @WebServlet("/employees")
 public class EpsServletController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * Default constructor. 
-     */
     public EpsServletController() {
         System.out.println("Payroll Sysetm Servlet");
     }
@@ -40,9 +35,6 @@ public class EpsServletController extends HttpServlet {
     //model class to receive data from jsp. Data from model class will be sent to database
     EmployeeModel modelEmployee = new EmployeeModel();
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
     @Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//db
@@ -120,4 +112,5 @@ public class EpsServletController extends HttpServlet {
 		rd.forward(request, response);
 	}
 }
+*/
 
