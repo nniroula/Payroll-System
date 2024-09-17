@@ -48,6 +48,8 @@ An Employee Payroll System App that calculates the gross pay of an employee
 	-- Run the command ``use eps_db(your database name);`` to connect to your database <br>
 	-- ``SELECT * FROM employee(or your table name);`` to display the list of items from the database table <br>
 	-- Then run the project in Eclipse and provide console input. Check the table as above for the update.
+	
+<hr>
 
 
 #### Version-5 (epsV5) 
@@ -70,6 +72,7 @@ An Employee Payroll System App that calculates the gross pay of an employee
 - Right click on ``index.jsp file`` - Run As - run on server <br>
 - Enter the required input <br>
 - In ``Terminal`` - run the command ``mysql`` and hit enter. Then show databases; use database_name; select * from employee<br>
+- ``NOTE:`` - you may have to uncomment ``ServletController file in epsV5`` if you are running this project up to version 5. <br>
 - ``epsV6 and onward``, update your ``mysql`` credentials in ``JdbcCredential.java file``.
 
 <hr>
@@ -78,6 +81,26 @@ An Employee Payroll System App that calculates the gross pay of an employee
 
 - Implements ``DAO (Data Access Object) layer``- to separated ``JDBC`` ``CRUD`` operations from the controller
 - Uses ``final class`` concept - to hold mySQL login credentials.<br>
-- ``DAO Layer`` - handles database related operations <br>
+- ``DAO Layer`` - handles database related operations
+- NOTE: To run this version:- Uncomment the Controller mapping (@WebServlet("/employees") in EpsServletControllerUpdated.java file
+
+<hr>
+
+#### Version-7 (eps.v7.jdbcConnector) 
+- Separates JDBC connection credentials into separate package
+- Future packages requiring jdbc connection should use this package
+
+<hr>
+
+#### Version-8 (eps.v8.hibernate) 
+- Implements ``ORM framework`` called ``Hibernate``- to convert java code into ``SQL queries``
+- ``ORM`` connects object modal to Relational Database tables. If you don't know SQL - use ORM. It's all about object to table mapper.
+- Employs ``JPA Annotations``
+
+<hr>
+
+#### To Run MySQL Database in Mac Terminal 
+- In System preference, start MySQL workbench
+- if ``mysql`` command does not work in terminal, then use ``mysql -u root -p`` command and enter your mysql password when prompted
 
 <hr>
