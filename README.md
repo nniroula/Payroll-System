@@ -2,7 +2,7 @@
 An Employee Payroll System App that calculates the gross pay of an employee
 <hr>
 
-#### Version-1 (epsV1) 
+#### Version-1 (eps.v1_oops) 
 
 - This version implements OOP concepts and Static List:-
 	- ``Encapsulation`` - private access modifier for instance variables <br>
@@ -13,15 +13,15 @@ An Employee Payroll System App that calculates the gross pay of an employee
 	
 <hr>	
 
-#### Version-2 (epsV2) 
+#### Version-2 (eps.v2_io) 
 
 - This version implements OOP concepts plus following:- 
 	- ``I/O`` - gets user input <br>
 	- ``Separation of Concern, abstraction and code modularization`` <br>
-	
+
 <hr>
 
-#### Version-3 (epsV3) 
+#### Version-3 (eps.v3_jdbcStatic) 
 
 - This version implements the following:- 
 	- ``JDBC`` - Java Database Connectivity <br>
@@ -32,7 +32,7 @@ An Employee Payroll System App that calculates the gross pay of an employee
 
 <hr>
 
-#### Version-4 (epsV4) 
+#### Version-4 (eps.v4_jdbcDynamic) 
 
 - This version:- 
 	- takes in console input and updates database table accordingly <br>
@@ -52,7 +52,7 @@ An Employee Payroll System App that calculates the gross pay of an employee
 <hr>
 
 
-#### Version-5 (epsV5) 
+#### Version-5 (eps.v5_mavenProject) 
 
 - Converted to Maven Project and implemented ``MVC Design Pattern``:-
 - ``pom.xml`` - uses pom.xml (Project Object Model) file to manage external jars and library 		dependencies.<br>
@@ -77,7 +77,7 @@ An Employee Payroll System App that calculates the gross pay of an employee
 
 <hr>
 
-#### Version-6 (epsV6) 
+#### Version-6 (eps.v6_dao) 
 
 - Implements ``DAO (Data Access Object) layer``- to separated ``JDBC`` ``CRUD`` operations from the controller
 - Uses ``final class`` concept - to hold mySQL login credentials.<br>
@@ -86,21 +86,27 @@ An Employee Payroll System App that calculates the gross pay of an employee
 
 <hr>
 
-#### Version-7 (eps.v7.jdbcConnector) 
+#### Version-7 (eps.v7_jdbcConnector) 
 - Separates JDBC connection credentials into separate package
 - Future packages requiring jdbc connection should use this package
 
 <hr>
 
-#### Version-8 (eps.v8.hibernate) 
-- Implements ``ORM framework`` called ``Hibernate``- to convert java code into ``SQL queries``
-- ``ORM`` connects object modal to Relational Database tables. If you don't know SQL - use ORM. It's all about object to table mapper.
-- Employs ``JPA Annotations``
-
+#### Version-8 (eps.v8_refactoredCode) 
+- Implements ``Separation of Concern principle`` and thus, employs ``Design Patterns`` to implement ``DAO`` layer(Data Access Object Layer) and ``MVC Architecture``. 
+- Extracts ``MySQL user Credentials`` that are needed for ``JDBC`` implementation into a separate package
+ 
 <hr>
 
 #### To Run MySQL Database in Mac Terminal 
 - In System preference, start MySQL workbench
 - if ``mysql`` command does not work in terminal, then use ``mysql -u root -p`` command and enter your mysql password when prompted
+
+<hr>
+
+#### Version-9 (eps.v9_hibernate) 
+- Implements ``ORM framework`` called ``Hibernate``- to convert java code into ``SQL queries``
+- ``ORM`` connects object modal to Relational Database tables. If you don't know SQL - use ORM. It's all about object to table mapper.
+ 
 
 <hr>
