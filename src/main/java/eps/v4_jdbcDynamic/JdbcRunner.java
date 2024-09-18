@@ -1,4 +1,4 @@
-package eps.v4.jdbcDynamic;
+package eps.v4_jdbcDynamic;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

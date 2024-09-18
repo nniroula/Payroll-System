@@ -1,4 +1,4 @@
-package eps.v4.jdbcDynamic;
+package eps.v4_jdbcDynamic;
 
 import eps.v2_io.EmployeeManager;
 
