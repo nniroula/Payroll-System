@@ -1,6 +1,6 @@
 package eps.v4.jdbcDynamic;
 
-import eps.v2.io.EmployeeManager;
+import eps.v2_io.EmployeeManager;
 
 /* Main App Class */
 public class PayrollRunner {
