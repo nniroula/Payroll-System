@@ -1,4 +1,4 @@
-package eps.v5.mavenProject;
+package eps.v5_mavenProject;
 
 import java.sql.*;
 

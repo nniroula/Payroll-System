@@ -1,4 +1,4 @@
-package eps.v5.mavenProject;
+package eps.v5_mavenProject;
 
 /* Java is Object Oriented Programming language. So, create a class to use it as an Object */
 public class EmployeeModel {
