@@ -1,4 +1,4 @@
-package eps.v1.oops;
+package eps.v1_oops;
 
 public class PartTimeEmployee extends Employee{
 	private int hoursWorked;

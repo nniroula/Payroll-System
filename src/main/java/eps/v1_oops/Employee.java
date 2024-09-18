@@ -1,4 +1,4 @@
-package eps.v1.oops;
+package eps.v1_oops;
 
 abstract class Employee {
 	private String name;
