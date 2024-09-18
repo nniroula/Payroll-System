@@ -1,4 +1,4 @@
-package eps.v7.jdbcConnector;
+package eps.v7_jdbcConnector;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
