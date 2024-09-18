@@ -1,4 +1,4 @@
-package eps.v8.hibernate;
+package eps.v8_refactoredCode;
 
 import java.sql.*;
 
