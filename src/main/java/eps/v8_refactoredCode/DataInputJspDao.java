@@ -3,7 +3,7 @@ package eps.v8_refactoredCode;
 import java.sql.*;
 
 import eps.v6_dao.JdbcCredential;
-import eps.v7.jdbcConnector.*;
+import eps.v7_jdbcConnector.*;
 
 // Each Dao class represents one table in database
 public class DataInputJspDao {
