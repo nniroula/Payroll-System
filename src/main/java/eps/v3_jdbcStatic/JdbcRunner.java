@@ -1,4 +1,4 @@
-package eps.v3.jdbcStatic;
+package eps.v3_jdbcStatic;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

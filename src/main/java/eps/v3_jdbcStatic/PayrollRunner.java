@@ -1,4 +1,4 @@
-package eps.v3.jdbcStatic;
+package eps.v3_jdbcStatic;
 
 import eps.v2_io.EmployeeManager;
 
