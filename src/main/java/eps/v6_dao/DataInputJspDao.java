@@ -1,4 +1,4 @@
-package eps.v6.dao;
+package eps.v6_dao;
 
 import java.sql.*;
 

@@ -1,4 +1,4 @@
-package eps.v6.dao;
+package eps.v6_dao;
 
 /* final class cannot be extended or inherited 
  * final variable -> to create constant variable

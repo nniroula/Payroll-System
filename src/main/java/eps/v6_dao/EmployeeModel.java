@@ -1,4 +1,4 @@
-package eps.v6.dao;
+package eps.v6_dao;
 
 /* Java is Object Oriented Programming language. So, create a class to use it as an Object */
 public class EmployeeModel {

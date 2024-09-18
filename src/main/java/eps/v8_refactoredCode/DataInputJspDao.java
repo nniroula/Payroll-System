@@ -2,7 +2,7 @@ package eps.v8_refactoredCode;
 
 import java.sql.*;
 
-import eps.v6.dao.JdbcCredential;
+import eps.v6_dao.JdbcCredential;
 import eps.v7.jdbcConnector.*;
 
 // Each Dao class represents one table in database
