@@ -16,7 +16,8 @@ final public class JdbcConnectionCredentials {
 	private static String username = "root"; // Replace root with your mysql username
 	
 	/* Replace root with your mySQl password */
-	private static String password = "root";
+	//private static String password = "root";
+	private static String password = "Mysql#23"; 
 
 	
 	/* best approach */

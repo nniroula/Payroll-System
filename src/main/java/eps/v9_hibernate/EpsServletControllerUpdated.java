@@ -1,4 +1,4 @@
-package eps.v8_refactoredCode;
+package eps.v9_hibernate;
 
 import java.io.IOException;
 
@@ -19,7 +19,7 @@ import jakarta.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class EpsServletController
  */
-//@WebServlet("/employees")
+@WebServlet("/employees")
 public class EpsServletControllerUpdated extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -27,7 +27,7 @@ public class EpsServletControllerUpdated extends HttpServlet {
      * Default constructor. 
      */
     public EpsServletControllerUpdated() {
-        System.out.println("Payroll Sysetm Servlet");
+        System.out.println("Payroll Sysetm Servlet - version 9 - ORM - Hibernate ");
     }
     
     private String employeeIdInput;
@@ -39,7 +39,7 @@ public class EpsServletControllerUpdated extends HttpServlet {
     private Double calculatedSalary;
     
     //model class to receive data from jsp. Data from model class will be sent to database
-    EmployeeModel modelEmployee = new EmployeeModel();
+    EmployeeModal modelEmployee = new EmployeeModal();
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -65,7 +65,6 @@ public class EpsServletControllerUpdated extends HttpServlet {
 		// hours worked 
 		hoursWorkedFromIndexJspFile = request.getParameter("EmpTotalHours");
 		request.setAttribute("totalHoursFromIndexJspFile", hoursWorkedFromIndexJspFile);
-		//modelEmployee.setEmployeeHoursWorked(Integer.parseInt(hoursWorkedFromIndexJspFile));
 		
 		//salary retrieval and manipulation EmpSalary
 		empSalaryFromIndexJspFile = request.getParameter("EmpSalary");
@@ -78,16 +77,21 @@ public class EpsServletControllerUpdated extends HttpServlet {
 		}
 		request.setAttribute("calculatedSalary", calculatedSalary);
 		
-		//Dao and model classes implementation 
-		DataInputJspDao daoObject = new DataInputJspDao();
-		EmployeeModel newEmp = daoObject.addEmployee(Integer.parseInt(employeeIdInput), 
-													employeeNameInput,
-													empStatusFromIndexJspFile,
-													Double.parseDouble(empRateFromIndexJspFile),
-													Integer.parseInt(hoursWorkedFromIndexJspFile),
-													calculatedSalary
-												);
-		System.out.println(newEmp);
+		/* Dao and model classes implementation */
+		
+		// EmployeeDao class has a method that returns EmployeeModal class type object
+		// save this object to database
+		
+		EmployeeDao employeeDaoObject = new EmployeeDao();
+		EmployeeModal newEmployee = employeeDaoObject.createEmployee(Integer.parseInt(employeeIdInput), 
+											employeeNameInput, 
+											empStatusFromIndexJspFile, 
+											Double.parseDouble(empRateFromIndexJspFile), 
+											Integer.parseInt(hoursWorkedFromIndexJspFile), 
+											calculatedSalary);
+		
+		System.out.println("Employee Object created in Servlet:- ");
+		System.out.println(newEmployee);
 		
 		rd.forward(request, response);
 	}
