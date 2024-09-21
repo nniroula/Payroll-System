@@ -41,10 +41,10 @@ An Employee Payroll System App that calculates the gross pay of an employee
 	
 <hr>
 
-#### How to run the project so far? 
+#### How to run a <i>``Seed File``</i> and the project so far? 
 - Open this project in Eclipse and run it there
 - Open up terminal in your device and type ``mysql`` and hit enter <br>
-	-- Then run the command: ``source seed.sql;`` <br>
+	-- Then run the command: ``source seed.sql;`` - it's your <i>``SEED FILE``</i> <br>
 	-- Run the command ``use eps_db(your database name);`` to connect to your database <br>
 	-- ``SELECT * FROM employee(or your table name);`` to display the list of items from the database table <br>
 	-- Then run the project in Eclipse and provide console input. Check the table as above for the update.
@@ -95,10 +95,11 @@ An Employee Payroll System App that calculates the gross pay of an employee
 #### Version-8 (eps.v8_refactoredCode) 
 - Implements ``Separation of Concern principle`` and thus, employs ``Design Patterns`` to implement ``DAO`` layer(Data Access Object Layer) and ``MVC Architecture``. 
 - Extracts ``MySQL user Credentials`` that are needed for ``JDBC`` implementation into a separate package
+- NOTE: to run this version: uncomment @WebServlet("employees") in EpsServletControllerUpdated.java file. You may have to comment same thing in the subsequent versions.
  
 <hr>
 
-#### To Run MySQL Database in Mac Terminal 
+#### To Run <i>``MySQL Database``</i> in Mac <i>``Terminal``<i/> 
 - In System preference, start MySQL workbench
 - if ``mysql`` command does not work in terminal, then use ``mysql -u root -p`` command and enter your mysql password when prompted
 
@@ -107,6 +108,7 @@ An Employee Payroll System App that calculates the gross pay of an employee
 #### Version-9 (eps.v9_hibernate) 
 - Implements ``ORM framework`` called ``Hibernate``- to convert java code into ``SQL queries``
 - ``ORM`` connects object modal to Relational Database tables. If you don't know SQL - use ORM. It's all about object to table mapper.
+- ``NOTE:`` To run this version:- Replace root with your MySQL password in ``hibernate.cfg.xml`` file
  
 
 <hr>
