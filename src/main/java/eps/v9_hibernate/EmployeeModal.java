@@ -100,10 +100,5 @@ public class EmployeeModal {
 				+ employeeHoursWorked + ", employeeHourlyWage=" + employeeHourlyWage + ", employeeSalary="
 				+ employeeSalary + ", employeeStatus=" + employeeStatus + "]";
 	}
-	
-//	public void print() {
-//		System.out.println("IDDDDDDD in Model....");
-//		System.out.println(employeeId);
-//	}
 
 }
