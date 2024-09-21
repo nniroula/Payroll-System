@@ -90,8 +90,10 @@ public class EpsServletControllerUpdated extends HttpServlet {
 											Integer.parseInt(hoursWorkedFromIndexJspFile), 
 											calculatedSalary);
 		
-		System.out.println("Employee Object created in Servlet:- ");
+		System.out.println("Employee Object created in Servlet version - 9 is as below: ");
 		System.out.println(newEmployee);
+		
+		employeeDaoObject.getEmployeeFromDb();
 		
 		rd.forward(request, response);
 	}
