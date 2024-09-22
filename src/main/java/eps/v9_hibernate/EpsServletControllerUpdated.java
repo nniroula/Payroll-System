@@ -93,7 +93,14 @@ public class EpsServletControllerUpdated extends HttpServlet {
 		System.out.println("Employee Object created in Servlet version - 9 is as below: ");
 		System.out.println(newEmployee);
 		
+		// fetch employee
 		employeeDaoObject.getEmployeeFromDb();
+		
+		//upate employee info using DAO class
+		employeeDaoObject.updateEmployeeInfo();
+		
+		//delete employee
+		employeeDaoObject.deleteEmployee();
 		
 		rd.forward(request, response);
 	}

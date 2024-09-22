@@ -83,4 +83,31 @@ public class EmployeeDao {
 		
 		return employeeFromDb;
 	}
+	
+	/* 3. update data */
+	public EmployeeModal updateEmployeeInfo() {
+		Session session = establishHibernateSession();
+		Transaction tx = session.beginTransaction();
+		EmployeeModal empModal = new EmployeeModal();
+		
+		// retrieve employee from database and set its upated value
+		empModal = (EmployeeModal) session.get(EmployeeModal.class, 1);   // 1 is employee id in database
+		empModal.setEmployeeName("Newbie Programmer ");
+		session.persist(empModal);
+		tx.commit();
+		
+		System.out.println("Updated Employee data is below: ");
+		System.out.println(empModal);
+		
+		return empModal;
+	}
+	
+	public void deleteEmployee() {
+		Session session = establishHibernateSession();
+		Transaction tx = session.beginTransaction();
+		EmployeeModal empModal = session.get(EmployeeModal.class, 2);
+		//session.delete(empModal); // delete is hibernate method, but does not work
+		session.remove(empModal);
+		tx.commit();
+	}
 }
