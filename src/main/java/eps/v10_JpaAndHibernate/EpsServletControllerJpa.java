@@ -1,4 +1,4 @@
-package eps.v9_hibernate;
+package eps.v10_JpaAndHibernate;
 
 import java.io.IOException;
 
@@ -14,19 +14,20 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import eps.v9_hibernate.EmployeeModal;
 
 
 /**
  * Servlet implementation class EpsServletController
  */
-//@WebServlet("/employees")
-public class EpsServletControllerUpdated extends HttpServlet {
+@WebServlet("/employees")
+public class EpsServletControllerJpa extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * Default constructor. 
      */
-    public EpsServletControllerUpdated() {
+    public EpsServletControllerJpa() {
         System.out.println("Payroll Sysetm Servlet - version 9 - ORM - Hibernate ");
     }
     
@@ -78,12 +79,8 @@ public class EpsServletControllerUpdated extends HttpServlet {
 		request.setAttribute("calculatedSalary", calculatedSalary);
 		
 		/* Dao and model classes implementation */
-		
-		// EmployeeDao class has a method that returns EmployeeModal class type object
-		// save this object to database
-		
-		EmployeeDao employeeDaoObject = new EmployeeDao();
-		EmployeeModal newEmployee = employeeDaoObject.createEmployee(Integer.parseInt(employeeIdInput), 
+		EmployeeJpaDao employeeDaoObject = new EmployeeJpaDao();
+		EmployeeModal newEmployee = employeeDaoObject.createJpaEmployee(Integer.parseInt(employeeIdInput), 
 											employeeNameInput, 
 											empStatusFromIndexJspFile, 
 											Double.parseDouble(empRateFromIndexJspFile), 
@@ -93,14 +90,14 @@ public class EpsServletControllerUpdated extends HttpServlet {
 		System.out.println("Employee Object created in Servlet version - 9 is as below: ");
 		System.out.println(newEmployee);
 		
-		// fetch employee
-		employeeDaoObject.getEmployeeFromDb();
-		
-		//upate employee info using DAO class
-		employeeDaoObject.updateEmployeeInfo();
-		
-		//delete employee
-		employeeDaoObject.deleteEmployee();
+//		// fetch employee
+//		employeeDaoObject.getEmployeeFromDb();
+//		
+//		//upate employee info using DAO class
+//		employeeDaoObject.updateEmployeeInfo();
+//		
+//		//delete employee
+//		employeeDaoObject.deleteEmployee();
 		
 		rd.forward(request, response);
 	}
