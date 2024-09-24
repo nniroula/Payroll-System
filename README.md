@@ -1,5 +1,5 @@
 #### Employee Payroll System 
-An Employee Payroll System App that calculates the gross pay of an employee
+An Employee Payroll System
 <hr>
 
 #### Version-1 (eps.v1_oops) 
@@ -109,6 +109,21 @@ An Employee Payroll System App that calculates the gross pay of an employee
 - Implements ``ORM framework`` called ``Hibernate``- to convert java code into ``SQL queries``
 - ``ORM`` connects object modal to Relational Database tables. If you don't know SQL - use ORM. It's all about object to table mapper.
 - ``NOTE:`` To run this version:- Replace root with your MySQL password in ``hibernate.cfg.xml`` file
+- ``NOTE:`` Also uncomment  @WebServlet("employees") in the Servlet controller class. You may have to comment the same line of code in version 10 to make this version run successfully.
  
+<hr>
+
+#### Version-10 (eps.v10_JpaAndHibernate) 
+- Implements ``JPA (Java Persistence API) annotations`` with ``Hibernate`` to make Object-Relational(Java Objects to relational database table) mapping an ORM independent construct.
+- ``JPA`` is a specification (interface) and is only implemented with ORM framework like Hibernate, TopLinks or iBatis.
+- ``NOTE:`` To run this version:- Replace root with your MySQL password in ``persistence.xml`` file. You may have to do the same with ``hibernate.cfg.xml``.
+- ``NOTE:`` You may have to uncomment  @WebServlet("employees") in the Servlet controller class of version 9 so that the two controllers do not point to the same API route.
 
 <hr>
+
+#### How to run this project 
+- Open up the project in Eclipse
+- Make sure all external libraries and jar files are properly installed and configured including ``Tomcat server``, ``MySQL Connector jar``, ``Hibernate``, ``Servlet``, ``JDBC``, ``JSP``, ``JSTL``, ``Maven`` etc.
+- Right click on ``index.jsp`` file > Run on Server
+- Provide input in the browser.
+- Output will be displayed in the browser and mostly on the console.
