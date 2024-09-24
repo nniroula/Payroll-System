@@ -43,9 +43,11 @@ An Employee Payroll System
 
 #### How to run a <i>``Seed File``</i> and the project so far? 
 - Open this project in Eclipse and run it there
-- Open up terminal in your device and type ``mysql`` and hit enter <br>
+- Open up terminal in your device and type ``mysql`` and hit enter. If this does not work, then run the command ``mysql -u root -p``. Provide password for your MySQL RDBMS. <br>
 	-- Then run the command: ``source seed.sql;`` - it's your <i>``SEED FILE``</i> <br>
+	-- Use command ``show databases;`` to check your available databases;
 	-- Run the command ``use eps_db(your database name);`` to connect to your database <br>
+	-- Run the command ``show tables;`` to show available database tables <br>
 	-- ``SELECT * FROM employee(or your table name);`` to display the list of items from the database table <br>
 	-- Then run the project in Eclipse and provide console input. Check the table as above for the update.
 	
@@ -58,9 +60,9 @@ An Employee Payroll System
 - ``pom.xml`` - uses pom.xml (Project Object Model) file to manage external jars and library 		dependencies.<br>
 - ``Servlet`` - Server side technology. Works as a controller.<br>
 - ``TomCat Server`` - Servlet runs on TomCat Server.<br>
-- ``JSP`` - To incorporate java code into html file. It's a view<br>
+- ``JSP`` - To incorporate java code into html file. It's a view. <br>
 - ``JSTL`` - Java Standard Template Library for converting java code into html like code<br>
-- ``JDBC`` ``RDBMS`` ``MySQL``- <br>
+- ``JDBC`` ``RDBMS`` ``MySQL``- For database connectivity <br>
 - ``DAO Layer`` - separate database operations from controller into DAO class <br>
 
 <hr>
